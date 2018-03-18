@@ -1,0 +1,6 @@
+awacs==0.7.2
+cfn-flip==1.0.2
+click==6.7
+PyYAML==3.12
+six==1.11.0
+troposphere==2.2.1
