@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A set of serverless Lambda functions that shut down services that exceed billing limits.
+Resources:
+  rds-shutdown:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: rds_shutdown.rds_shutdown.lambda_handler
+      Runtime: python3.6
+      CodeUri: .
+      Description: Shuts down RDS instances that exceed the budget limit.
+      MemorySize: 128
+      Timeout: 3
